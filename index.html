@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Night 🍿</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0 0 10px;
+    }
+
+    header p {
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .card {
+      background: #1f2937;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      background: #6366f1;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #4f46e5;
+    }
+
+    .seat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .seat {
+      padding: 18px 8px;
+      border: none;
+      border-radius: 10px;
+      background: #374151;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .seat:hover {
+      background: #4f46e5;
+    }
+
+    .screen {
+      text-align: center;
+      padding: 10px;
+      margin: 10px auto 25px;
+      max-width: 600px;
+      background: #374151;
+      border-radius: 8px;
+      color: #cbd5e1;
+    }
+
+    .movie {
+      background: #374151;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .movie-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .muted {
+      color: #9ca3af;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 12px;
+      border-radius: 8px;
+      border: 1px solid #4b5563;
+      background: #111827;
+      color: white;
+      font-size: 16px;
+    }
+
+    .pizza-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #374151;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍿 Movie Night</h1>
+    <p>Movies • Friends • Pizza • Good times</p>
+  </header>
+
+  <main class="container">
+
+    <!-- EVENT -->
+    <section class="card">
+      <h2>🎬 Movie Night</h2>
+      <p><strong>Date:</strong> Coming soon</p>
+      <p><strong>Time:</strong> Coming soon</p>
+      <p><strong>Location:</strong> Coming soon</p>
+    </section>
+
+    <div class="grid">
+
+      <!-- SEATING -->
+      <section class="card">
+        <h2>💺 Seating</h2>
+
+        <p class="muted">
+          Choose where you'd like to sit.
+        </p>
+
+        <div class="screen">
+          SCREEN
+        </div>
+
+        <div class="seat-grid">
+          <button class="seat">Seat 1</button>
+          <button class="seat">Seat 2</button>
+          <button class="seat">Seat 3</button>
+          <button class="seat">Seat 4</button>
+
+          <button class="seat">Seat 5</button>
+          <button class="seat">Seat 6</button>
+          <button class="seat">Seat 7</button>
+          <button class="seat">Seat 8</button>
+
+          <button class="seat">Seat 9</button>
+          <button class="seat">Seat 10</button>
+          <button class="seat">Seat 11</button>
+          <button class="seat">Seat 12</button>
+        </div>
+      </section>
+
+      <!-- ATTENDING -->
+      <section class="card">
+        <h2>👥 Attending</h2>
+
+        <p class="muted">
+          Sign up for movie night.
+        </p>
+
+        <label>Your name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <button class="button">
+          I'm Coming!
+        </button>
+      </section>
+
+    </div>
+
+    <!-- MOVIES -->
+    <section class="card">
+      <h2>🎥 Movie Nominations</h2>
+
+      <p class="muted">
+        Nominate a movie for everyone to vote on.
+      </p>
+
+      <input
+        type="text"
+        placeholder="Movie title"
+      >
+
+      <button class="button">
+        Nominate Movie
+      </button>
+
+      <br><br>
+
+      <div class="movie">
+        <div class="movie-title">
+          Your movie nominations will appear here.
+        </div>
+        <div class="muted">
+          Voting will be added next.
+        </div>
+      </div>
+    </section>
+
+    <!-- PIZZA -->
+    <section class="card">
+      <h2>🍕 Pizza</h2>
+
+      <p class="muted">
+        Pre-order your pizza for movie night.
+      </p>
+
+      <div class="pizza-row">
+        <span>🍕 Pepperoni</span>
+        <select>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+
+      <div class="pizza-row">
+        <span>🧀 Cheese</span>
+        <select>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+
+      <div class="pizza-row">
+        <span>🥓 Meat Lovers</span>
+        <select>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+      </div>
+
+      <br>
+
+      <button class="button">
+        Save Pizza Order
+      </button>
+    </section>
+
+  </main>
+
+  <footer>
+    Movie Night 🍿
+  </footer>
+
+</body>
+</html>
