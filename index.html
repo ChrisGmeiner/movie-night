@@ -155,7 +155,17 @@ footer{text-align:center;color:#6b7280;padding:30px}
 </main>
 <footer>Movie Night 🍿</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
+const SUPABASE_URL = "https://nwbpnphaalmdzcnkpahm.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_QKEtgEGPJuVV2YjWN7Z63w_LhQ-IB9dyour-publishable-key-here";
+
+const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+</script>
 let selectedSeat=null;
 
 document.querySelectorAll(".seat").forEach(seat=>{
